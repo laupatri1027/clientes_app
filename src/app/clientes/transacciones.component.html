@@ -1,0 +1,23 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Bank BlueSoft</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Transacciones</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Numero</th>
+          <th>Monto</th>
+          <th>Tipo transaccion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaccion of transacciones">
+          <td>{{transaccion.id_transaccion}}</td>
+          <td>{{transaccion.monto}}</td>
+          <td>{{transaccion.tipo_transaccion}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">Bank BlueSoft</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de clientes</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Numero</th>
+          <th>Saldo</th>
+          <th>
+           Transacciones
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cuenta of Cuentas">
+          <td>{{ cuenta.id }}</td>
+          <td>{{ cuenta.saldo }}</td>
+          <td>
+            <button type="button" name="Ver" [routerLink]="['/clientes/cuenta', cliente.id]" class="btn btn-primary btn-sm">Transacciones</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
